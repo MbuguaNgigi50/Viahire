@@ -1,0 +1,94 @@
+{% extends "home/base.html" %}
+{% block content %}
+<form method="GET">
+  <div class="form-row">
+      <div class="form-group col-12">
+          <div class="input-group">
+              <input class="form-control py-2 border-right-0 border" type="search" name="Employment_History_contains" placeholder="Employment History contains..." value="{{ request.GET.Employment_History_contains }}" />
+              <span class="input-group-append">
+                  <div class="input-group-text bg-transparent">
+                      <i class="fa fa-search"></i>
+                  </div>
+              </span>
+          </div>
+      </div>
+  </div>
+  <div class="form-row">
+      <div class="form-group col-12">
+          <div class="input-group">
+              <input class="form-control py-2 border-right-0 border" type="search" name="education_contains" placeholder="Education..." value="{{ request.GET.education_contains }}"/>
+              <span class="input-group-append">
+                  <div class="input-group-text bg-transparent">
+                      <i class="fa fa-search"></i>
+                  </div>
+              </span>
+          </div>
+      </div>
+  </div>
+  <div class="form-row">
+      <div class="form-group col-12">
+          <div class="input-group">
+              <input class="form-control py-2 border-right-0 border" type="search" name="skills_contains" placeholder="Skills..." value="{{ request.GET.skills_contains }}"/>
+              <span class="input-group-append">
+                  <div class="input-group-text bg-transparent">
+                      <i class="fa fa-search"></i>
+                  </div>
+              </span>
+          </div>
+      </div>
+  </div>
+  <div class="form-row">
+      <div class="form-group col-12">
+          <div class="input-group">
+              <input class="form-control py-2 border-right-0 border" type="search" name="hobbies_contains" placeholder="Hobbies..." value="{{ request.GET.hobbies_contains }}"/>
+              <span class="input-group-append">
+                  <div class="input-group-text bg-transparent">
+                      <i class="fa fa-search"></i>
+                  </div>
+              </span>
+          </div>
+      </div>
+  </div>
+  <div class="form-row">
+      <div class="form-group col-12">
+          <div class="input-group">
+              <input class="form-control py-2 border-right-0 border" type="search" name="internships_contains" placeholder="Internships..." value="{{ request.GET.internships_contains }}"/>
+              <span class="input-group-append">
+                  <div class="input-group-text bg-transparent">
+                      <i class="fa fa-search"></i>
+                  </div>
+              </span>
+          </div>
+      </div>
+  </div>
+  <div class="form-row">
+      <div class="form-group col-12">
+          <div class="input-group">
+              <input class="form-control py-2 border-right-0 border" type="search" name="referees_contains" placeholder="Referees..." value="{{ request.GET.referees_contains }}"/>
+              <span class="input-group-append">
+                  <div class="input-group-text bg-transparent">
+                      <i class="fa fa-search"></i>
+                  </div>
+              </span>
+          </div>
+      </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Sort</button>
+</form>
+
+
+<div class="">
+  {% for applicant in applicants %}
+    {% for applicant in qs %}
+    <article class="media content-section">
+      <img class="rounded-circle article-img" src="{{ applicant.Username.profile.image.url }}">
+      <div class="media-body">
+        <div class="article-metadata">
+         <h2><a class="article-title" href="{% url 'applicant_detail' applicant.id %}">{{ applicant.First_Name }} {{applicant.Last_Name}}</a></h2>
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  {% endfor %}
+</div>
+{% endblock content %}

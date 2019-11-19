@@ -1,0 +1,28 @@
+{% extends "home/base.html" %}
+{% block content %}
+<article class="media content-section">
+  <div class="media-body">
+    <small class="text-muted">{{ Post.Job_Date }}</small>
+    <h2>CURRENT JOB</h2>
+    <p class="article-content">{{ object.Current_Job }}</p>
+    <h2>AGE</h2>
+    <p class="article-content">{{ object.Age }}</p>
+    <h2>EMAIL ADDRESS</h2>
+    <p class="article-content">{{ object.Email_Address }}</p>
+    <h2>TELEPHONE NUMBER</h2>
+    <p class="article-content">{{ object.Telephone_Number }}</p>
+    <h2>EMPLOYMENT HISTORY</h2>
+    <p class="article-content">{{ object.Employment_History }}</p>
+    <h2>EDUCATION</h2>
+    <p class="article-content">{{ object.Education }}</p>
+    <h2>SKILLS</h2>
+    <p class="article-content">{{ Skills }}</p>
+    <h2>HOBBIES</h2>
+    <p class="article-content">{{ object.Hobbies }}</p>
+    <h2>INTERNSHIPS</h2>
+    <p class="article-content">{{ object.Internships }}</p>
+    <h2>REFEREES</h2>
+    <p class="article-content">{{ object.Referress }}</p>
+  </div>
+</article>
+{% endblock content %}

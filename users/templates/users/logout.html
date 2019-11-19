@@ -1,0 +1,9 @@
+{% extends "home/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <h2>You Have Been Logged Out</h2>
+      <div class="border-top pt-3">
+        <a class="ml-2" href="{% url 'viahire-login' %}">Log In</a>
+      </div>
+    </div>
+{% endblock content %}
