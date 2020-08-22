@@ -1,0 +1,12 @@
+To run this, you will have to have the latest version of Python installed on the machine along with the latest versions of Django, Pillow and Crispy Forms.
+
+
+
+
+Admin User:  CHIGATE5
+Password: CHIGAchiga7878
+
+
+The installation packages can be installed from the text file (Requirements.txt). To do this, run the code
+
+pip install -r Requirements.txt
