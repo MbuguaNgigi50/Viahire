@@ -17,11 +17,3 @@ The installation packages can be installed from the text file (Requirements.txt)
 pip install -r Requirements.txt
 
 ******End of Requirements*******
-
-
-******Credentials For Test Data********
-
-Admin User:  CHIGATE5
-Password: CHIGAchiga7878
-
-******End of Credentials For Test Data********
